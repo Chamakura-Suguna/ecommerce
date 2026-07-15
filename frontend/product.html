@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Product</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <nav>
+    <a href="index.html"><strong>Storefront</strong></a>
+    <a href="cart.html">Cart</a>
+    <a href="wishlist.html">Wishlists</a>
+  </nav>
+
+  <main>
+    <div id="error" class="error-banner" hidden></div>
+    <a class="back-link" href="index.html">&larr; Back to catalog</a>
+
+    <div id="product-detail" class="product-detail-card">Loading...</div>
+
+    <section class="wishlist-add-section">
+      <h3>Add to wishlist</h3>
+
+      <div id="wishlist-picker-row" class="form-row" hidden>
+        <select id="wishlist-select"></select>
+        <button id="add-to-wishlist-btn">Add</button>
+      </div>
+
+      <p id="no-wishlists-message" hidden>
+        You don't have any wishlists yet.
+      </p>
+
+      <form id="quick-create-form" class="form-row">
+        <input id="quick-create-name" type="text" placeholder="New wishlist name" required />
+        <button type="submit">Create &amp; add</button>
+      </form>
+
+      <p id="wishlist-feedback" class="feedback-text"></p>
+    </section>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/product.js"></script>
+</body>
+</html>

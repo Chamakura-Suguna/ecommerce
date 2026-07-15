@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Wishlists</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <nav>
+    <a href="index.html"><strong>Storefront</strong></a>
+    <a href="cart.html">Cart</a>
+    <a href="wishlist.html">Wishlists</a>
+  </nav>
+
+  <main>
+    <div id="error" class="error-banner" hidden></div>
+
+    <section>
+      <h2>Your wishlists</h2>
+      <form id="create-wishlist-form">
+        <input id="new-wishlist-name" type="text" placeholder="New wishlist name" required />
+        <button type="submit">Create</button>
+      </form>
+      <div id="wishlist-columns"></div>
+    </section>
+
+    <section id="merge-section" hidden>
+      <h2>Merge two wishlists</h2>
+      <p class="section-hint">Merging is destructive: the source list is deleted and its items are folded into the target list.</p>
+      <div class="merge-controls">
+        <label>
+          Source (will be deleted)
+          <select id="merge-source"></select>
+        </label>
+        <label>
+          Target (will keep this name)
+          <select id="merge-target"></select>
+        </label>
+        <button id="merge-btn">Merge</button>
+      </div>
+    </section>
+
+    <div id="merge-confirm-modal" class="modal-backdrop" hidden>
+      <div class="modal-box">
+        <p id="merge-confirm-text"></p>
+        <button id="merge-confirm-yes">Yes, merge</button>
+        <button id="merge-confirm-no">Cancel</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/wishlist.js"></script>
+</body>
+</html>
