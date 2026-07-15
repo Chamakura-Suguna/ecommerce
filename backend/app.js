@@ -7,13 +7,12 @@ const cartRouter = require('./routes/cart');
 const checkoutRouter = require('./routes/checkout');
 
 // CORS_ORIGIN in .env is a comma-separated list (see .env.example). Falls
-// back to common local dev ports plus the GitHub Pages placeholder below —
-// replace YOUR_GITHUB_USERNAME once the real Pages URL is known.
+// back to common local dev ports plus the deployed GitHub Pages origin.
 const defaultOrigins = [
   'http://localhost:5500',
   'http://127.0.0.1:5500',
   'http://localhost:5173',
-  'https://YOUR_GITHUB_USERNAME.github.io',
+  'https://chamakura-suguna.github.io',
 ];
 const allowedOrigins = process.env.CORS_ORIGIN
   ? process.env.CORS_ORIGIN.split(',').map((o) => o.trim())
